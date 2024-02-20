@@ -27,9 +27,7 @@ if ($userId) {
         http_response_code(404); // 如果未找到用户，返回 404 状态码
         echo json_encode(array('error' => 'User not found'));
     } else {
-        $json_user_jx = json_encode($user);
-        $user_cg = json_decode($json_user_jx);
-        echo $user_cg ; // 返回用户信息
+        echo json_encode($user)
     }
 
 } else {
